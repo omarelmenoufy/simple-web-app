@@ -7,55 +7,82 @@ body, h1, h2, h3, p, ul, li, input, textarea, button {
 
 /* Body Styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     line-height: 1.6;
     color: #333;
     background-color: #f4f4f4;
 }
 
+/* Container */
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
 /* Header Styles */
 header {
-    background: #333;
+    background: linear-gradient(135deg, #007bff, #00d2ff);
     color: #fff;
     text-align: center;
-    padding: 2rem;
+    padding: 4rem 0;
+    position: relative;
+    z-index: 1;
 }
 
 header h1 {
-    font-size: 2.5rem;
+    font-size: 3rem;
     margin-bottom: 0.5rem;
 }
 
 header p {
     font-size: 1.2rem;
+    margin-bottom: 1rem;
 }
 
 .cta-button {
-    background: #e8491d;
-    color: #fff;
-    padding: 10px 20px;
+    background: #fff;
+    color: #007bff;
+    padding: 12px 25px;
     text-decoration: none;
     font-weight: bold;
     border-radius: 5px;
+    font-size: 1.1rem;
+    transition: background 0.3s, color 0.3s;
 }
 
 .cta-button:hover {
-    background: #d93f16;
+    background: #007bff;
+    color: #fff;
 }
 
 /* Features Section */
 #features {
     text-align: center;
-    padding: 2rem;
+    padding: 4rem 0;
+    background: #fff;
 }
 
 .feature {
-    margin: 1rem 0;
+    margin: 1.5rem 0;
+}
+
+.feature img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 1rem;
 }
 
 .feature h3 {
-    font-size: 1.5rem;
+    font-size: 1.75rem;
     margin-bottom: 0.5rem;
+    color: #007bff;
+}
+
+.feature p {
+    font-size: 1.1rem;
+    color: #666;
 }
 
 /* Pricing Section */
@@ -63,26 +90,43 @@ header p {
     display: flex;
     justify-content: center;
     gap: 2rem;
-    padding: 2rem;
+    padding: 4rem 0;
 }
 
 .pricing-plan {
     background: #fff;
     border: 1px solid #ddd;
-    border-radius: 5px;
-    padding: 1rem;
+    border-radius: 10px;
+    padding: 2rem;
     width: 300px;
     text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.pricing-plan:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.pricing-plan img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 1rem;
 }
 
 .pricing-plan h3 {
-    font-size: 1.5rem;
+    font-size: 2rem;
     margin-bottom: 0.5rem;
+    color: #007bff;
 }
 
 .pricing-plan p {
-    font-size: 1.2rem;
-    color: #e8491d;
+    font-size: 1.5rem;
+    color: #00d2ff;
+    margin-bottom: 1rem;
 }
 
 .pricing-plan ul {
@@ -98,7 +142,7 @@ header p {
 /* Contact Section */
 #contact {
     background: #fff;
-    padding: 2rem;
+    padding: 4rem 0;
     text-align: center;
 }
 
@@ -109,29 +153,32 @@ header p {
 
 input, textarea {
     width: 100%;
-    padding: 10px;
+    padding: 12px;
     margin: 0.5rem 0;
     border: 1px solid #ddd;
     border-radius: 5px;
+    font-size: 1rem;
 }
 
 button {
-    background: #e8491d;
+    background: #007bff;
     color: #fff;
-    padding: 10px;
+    padding: 12px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    font-size: 1.1rem;
+    transition: background 0.3s;
 }
 
 button:hover {
-    background: #d93f16;
+    background: #0056b3;
 }
 
 /* Footer Styles */
 footer {
-    text-align: center;
-    padding: 1rem;
     background: #333;
     color: #fff;
+    text-align: center;
+    padding: 1rem 0;
 }
