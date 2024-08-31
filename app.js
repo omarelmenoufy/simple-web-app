@@ -1,19 +1,29 @@
-// Select the form, input, and output elements
-const form = document.getElementById("userForm");
-const usernameInput = document.getElementById("username");
-const output = document.getElementById("output");
+// Select the contact form and input elements
+const contactForm = document.getElementById("contactForm");
 
-// Add an event listener to the form to handle submission
-form.addEventListener("submit", function(event) {
-    // Prevent the form from submitting the traditional way
+// Handle form submission
+contactForm.addEventListener("submit", function(event) {
+    // Prevent the default form submission
     event.preventDefault();
 
-    // Get the value of the input field
-    const username = usernameInput.value;
+    // Get form values
+    const name = document.getElementById("name").value;
+    const email = document.getElementById("email").value;
+    const message = document.getElementById("message").value;
 
-    // Display a personalized greeting
-    output.innerHTML = "Hello, " + username + "!";
+    // Basic form validation
+    if (name && email && message) {
+        // For demonstration purposes, we'll just log the data
+        console.log(`Name: ${name}`);
+        console.log(`Email: ${email}`);
+        console.log(`Message: ${message}`);
 
-    // Clear the input field
-    usernameInput.value = "";
+        // Display a thank you message
+        alert("Thank you for contacting us! We will get back to you soon.");
+        
+        // Clear the form fields
+        contactForm.reset();
+    } else {
+        alert("Please fill out all fields.");
+    }
 });
